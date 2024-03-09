@@ -6,4 +6,7 @@ const result = document.getElementById("result");
 //function checks user input value.
 const checkUserInput = () => {
     console.log(numberInput.value);
-}
+};
+
+//Click event listener for convert btn, logs value of number input 
+convertBtn.addEventListener("click", checkUserInput);
