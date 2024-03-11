@@ -15,7 +15,7 @@ convertBtn.addEventListener("click", checkUserInput);
 numberInput.addEventListener("keydown", (e) => { //pass e as parameter to call back function. 
     //event object is created when event listener is triggede by an event.  
     // key property, holds the string value of the key pressed.
-    if(e.key == "Enter") { 
+    if(e.key === "Enter") { 
         // call check user input fucntion
         checkUserInput();
     }
