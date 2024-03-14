@@ -5,7 +5,6 @@ const result = document.getElementById("result");
 
 //function checks user input value.
 const checkUserInput = () => {
-    console.log(numberInput.value);
     //Check if the user input value is falsy or cannot be converted to an integer.
     if(!numberInput.value || isNaN(parseInt(numberInput.value))) {
         //Alert the user if no number entered or the number is invalid.
