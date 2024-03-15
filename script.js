@@ -3,6 +3,10 @@ const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
+//function handling decimal to binary conversion
+const decimalToBinary = (input) => {
+    
+}
 //function checks user input value.
 const checkUserInput = () => {
     //Check if the user input value is falsy or cannot be converted to an integer.
@@ -12,6 +16,11 @@ const checkUserInput = () => {
         return;
         
     }
+    //call decimalToBinary function with the parsed value of numberInput
+    decimalToBinary(parseInt(numberInput.value));
+
+    //clear value of numberInput
+    numberInput.value = "";
 };
 
 //Click event listener for convert btn, logs value of number input 
