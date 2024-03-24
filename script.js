@@ -5,7 +5,11 @@ const result = document.getElementById("result");
 
 //function handling decimal to binary conversion
 const decimalToBinary = (input) => {
-    
+    //Setup array's to store decimal input, quotients, and remainders for the decimal to binary conversion process.
+    const inputs = [];
+    const quotients = [];
+    const remainders = [];
+
 }
 //function checks user input value.
 const checkUserInput = () => {
