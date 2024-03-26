@@ -10,7 +10,35 @@ const decimalToBinary = (input) => {
     const quotients = [];
     const remainders = [];
 
-}
+
+    //Iterate until input becomes zero
+    while (input > 0) {
+        //Calculate the quotient by dividing input by 2 and rounding down.
+        const quotient = Math.floor(input /2);
+
+        //Calculate the remainder by finding the modulus of input divided by 2
+        const remainder = input % 2;
+
+        //append input to inputs array.
+        inputs.push(input);
+        //append quotient to quotients array.
+        quotients.push(quotient);
+        //append remainder to remainders array. 
+        remainders.push(remainder);
+
+        // Update input to the quotient for the next iteration
+        input = quotient;
+    }
+    //Debugging: Log inputs, quotients, and remainders arrays to the console 
+    console.log("Inputs: ", inputs);
+    console.log("Quotients: ", quotients);
+    console.log("Remainders: ", remainders);
+
+    //reverse the remainders array and join it into a binary number string and set result innerText to it.
+    result.innerText = remainders.reverse().join("");
+
+};
+
 //function checks user input value.
 const checkUserInput = () => {
     //Check if the user input value is falsy or cannot be converted to an integer.
