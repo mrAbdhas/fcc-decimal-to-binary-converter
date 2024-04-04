@@ -10,6 +10,10 @@ const decimalToBinary = (input) => {
     const quotients = [];
     const remainders = [];
 
+    if (input == 0) {
+        result.innerText = "0";
+        return;
+    }
 
     //Iterate until input becomes zero
     while (input > 0) {
@@ -29,11 +33,6 @@ const decimalToBinary = (input) => {
         // Update input to the quotient for the next iteration
         input = quotient;
     }
-    //Debugging: Log inputs, quotients, and remainders arrays to the console 
-    console.log("Inputs: ", inputs);
-    console.log("Quotients: ", quotients);
-    console.log("Remainders: ", remainders);
-
     //reverse the remainders array and join it into a binary number string and set result innerText to it.
     result.innerText = remainders.reverse().join("");
 
